@@ -2,12 +2,141 @@
 <html>
 
 <head>
-    <!-- TODO: Include Font Awesome file here -->
-    <!-- TODO: Include Google Fonts file here -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montez&display=swap">
+    <script src="https://use.fontawesome.com/7ce032670a.js"></script>
 </head>
 
 <body>
-    <!-- TODO: Include all your code for the header and home page here -->
+    <header class="main-header">
+        <div class="logo-container">
+            <a href="index.html" style="text-decoration: none; color: inherit;">
+                <span class="logo">ScriBBler</span><br>
+                <span style="font-family: 'Ubuntu Mono', monospace;">Explore, IMagine, Create</span>
+            </a>
+        </div>
+
+        <div class="buttons">
+            <button type="button" class="btn btn-primary" id="sign-up-button" style="margin-right: 10px;">
+                Sign Up
+            </button>
+
+            <button type="button" class="btn btn-primary" id="sign-in-button">
+                Sign in
+            </button>
+        </div>
+    </header>
+    <div class="container">
+        <!-- The Modal -->
+        <div id="signUpModal" class="modal">
+            <div class="modal-dialog modal-dialog-centered">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Get Started</h5>
+                        <span class="close_signUp">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Username</label>
+                                <input type="text" class="form-control" id="username" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password1" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password2" class="form-label">Confirm Password</label>
+                                <input type="password" class="form-control" id="password2" required>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-success">Sign Up</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- The Modal -->
+        <div id="signInModal" class="modal">
+            <div class="modal-dialog modal-dialog-centered">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Welcome Back !</h5>
+                        <span class="close_signIn">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="username1" class="form-label">Username</label>
+                                <input type="text" class="form-control" id="username1" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" required>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-success">Sign In</button>
+                                <b style="text-align: center;">Not a member? <span id="sign-up-link"
+                                        style="color: blue;">Sign Up</span></b>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <button type="button" class="btn btn-warning" style="margin-right: 20px; width: 10%;">
+                <a href="html/postslist.html" style="text-decoration: none; color: black;">All Posts</a>
+            </button>
+            <button type="button" class="btn btn-warning" style="width: 10%;" id="create-post-button">Create
+                Post</button>
+        </div>
+        <!-- The Modal -->
+        <div id="createPostModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content" style="width: 80%; margin-top: 100px;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Pen Your Post</h5>
+                    <span class="close_createPost">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="title" class="form-label"><b>Title</b></label>
+                            <input type="text" class="form-control" id="title" placeholder="Enter title of your post"
+                                required style="background-color: #e9e8e8;">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cpTextarea" class="form-label"><b>Contents</b></label>
+                            <textarea class="form-control" id="cpTextarea" placeholder="Enter the contents of your post"
+                                required style="min-height: 250px; background-color: #eed9d9;"></textarea>
+                        </div>
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <button type="submit" class="btn btn-success">Create</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="scripts/common.js" async defer></script>
+    <script src="scripts/index.js" async defer></script>
 </body>
 
 </html>

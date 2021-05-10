@@ -1,0 +1,78 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.post-container {
+    position: static;
+    margin-top: 120px;
+    margin-bottom: 50px;
+    width: 100%;
+    height: auto;
+}
+
+.post-title {
+    font-family: 'Lobster', cursive;
+    font-size: 24px;
+    color: #7a7a7a;
+    text-align: center;
+}
+
+.post-author {
+    font-family: 'Lobster', cursive;
+}
+
+.author-name {
+    font-size: 20px;
+    color: rgb(141, 141, 141);
+    font-weight: bold;
+}
+
+.author-button {
+    width: auto;
+    border-radius: 10px;
+    color: #fff !important;
+    background-color: rgb(255, 71, 126) !important;
+    float: right;
+}
+
+.post-data {
+    padding: 10px;
+    line-height: 1.6;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 20px;
+}
+
+.post-likes {
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.like-button {
+    width: 80px;
+    border-radius: 10px;
+    color: #fff !important;
+    background-color: rgb(255, 71, 126) !important;
+}
+
+.post-comments {
+    margin: 10px;
+}
+
+.comment-form {
+    min-height: 60px;
+    background-color: #ffe4f1 !important;
+}
+
+.comment-button {
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #fff !important;
+    background-color: rgb(255, 71, 126) !important;
+}
+
+.comment-list {
+    background-color: rgb(196, 196, 196);
+    padding: 10px;
+}

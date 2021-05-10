@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../styles/postslist.css">
+    <link rel="stylesheet" href="../styles/post.css">
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montez&display=swap">
+    <script src="https://use.fontawesome.com/7ce032670a.js"></script>
+</head>
+
+<body>
+    <header class="main-header" style="background-color: #fff;">
+        <div class="logo-container">
+            <a href="../index.html" style="text-decoration: none; color: inherit;">
+                <span class="logo">ScriBBler</span><br>
+                <span style="font-family: 'Ubuntu Mono', monospace;">Explore, IMagine, Create</span>
+            </a>
+        </div>
+
+        <div class="buttons">
+            <button type="button" class="btn btn-primary" id="sign-up-button" style="margin-right: 10px;">
+                Sign Up
+            </button>
+
+            <button type="button" class="btn btn-primary" id="sign-in-button">
+                Sign in
+            </button>
+        </div>
+    </header>
+    <div class="container">
+        <div class="post-container">
+            <div class="post-title">
+                <span class="post-title" id="post-title">Everything you should know about ‘module’ & ‘require’ in
+                    Node.js</span>
+            </div>
+            <hr>
+            <div class="post-author">
+                <span class="author-name">Srishti Gupta</span>
+                <button class="btn author-button" onclick="editPost(this)" id="edit-button">Edit <i
+                        class="fa fa-edit"></i></button>
+            </div>
+            <div class="post-data">
+                <p id="post-data"> Node.js treats each JavaScript file as a separate module.
+                    For instance, if you have a file containing some code and this file is named xyz.js, then this file
+                    is treated as a module in Node, and you can say that you’ve created a module named xyz. Let’s take
+                    an example to understand this better. You have a file named circle.js which consists of the logic
+                    for calculating the area & the circumference of a circle of a given radius, as given below:
+                    circle.js. Code written inside a module is private to it! Imagine that there are two modules. The
+                    code written inside the module A is enclosed within the function wrapper corresponding to the
+                    module Similar thing happens with the code written inside the module B. Because the code pertaining
+                    both the modules is enclosed within different functions, these functions will not be able to access
+                    the code of each other. (Remember each function in JavaScript has its own local scope?) This is the
+                    reason why module A cannot access the code written inside module B and vice-versa.Now, what does the
+                    exported by a module. Whatever is exported from a module can, in turn, be made available to other
+                    modules. Exporting something is quite easy. You just need to add it to the module.exports object.
+                    There are three ways to add something to the module.exports object to be exported. Let’s discuss
+                    these methods one by one.</p>
+            </div>
+            <div class="post-likes">
+                <button class="btn like-button" onclick="addLike()" id="likeBlog" style="margin: 10px;"><i
+                        class="fa fa-thumbs-up"></i> Like</button>
+                <p id="likeCount" style="margin: 10px; color: grey;">Be the first one to like this!</p>
+            </div>
+            <div class="post-comments">
+                <textarea class="form-control comment-form" id="userComments" placeholder="Leave a comment..."
+                    required></textarea>
+                <button class="btn comment-button" onclick="addComment(userComments)" id="addList">Comment</button>
+                <div id="addEventNames"></div>
+            </div>
+        </div>
+    </div>
+    <script src="../scripts/post.js" async defer></script>
+</body>
+
+</html>
